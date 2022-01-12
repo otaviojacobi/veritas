@@ -12,8 +12,8 @@ if (process.env.NODE_ENV === 'development') {
   redirectSignIn = 'http://localhost:3000/dashboard';
   redirectSignOut = 'http://localhost:3000/dashboard';
 } else {
-  redirectSignIn = 'https://main.d3521c4azxxe3o.amplifyapp.com/';
-  redirectSignOut = 'https://main.d3521c4azxxe3o.amplifyapp.com/';
+  redirectSignIn = 'https://main.d3521c4azxxe3o.amplifyapp.com/dashboard';
+  redirectSignOut = 'https://main.d3521c4azxxe3o.amplifyapp.com/dashboard';
 }
 
 Amplify.configure({
