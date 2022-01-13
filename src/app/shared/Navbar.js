@@ -18,8 +18,10 @@ export default function Navbar(){
   function getUserPicture(user) {
     if (user.username.startsWith('Facebook')) {
       return JSON.parse(user.attributes.picture)["data"]["url"];
+    } else if (user.username.startsWith('Google')) {
+      return user.attributes.picture;
     }
-    return user.attributes.picture;
+    return require("../../assets/images/faces/empty-person.jpg");
   }
 
   function toggleOffcanvas() {
@@ -29,7 +31,7 @@ export default function Navbar(){
   return (
     <nav className="navbar col-lg-12 col-12 p-lg-0 fixed-top d-flex flex-row">
       <div className="navbar-menu-wrapper d-flex align-items-center justify-content-between">
-      <a className="navbar-brand brand-logo-mini align-self-center d-lg-none" href="!#" onClick={evt =>evt.preventDefault()}><img src={require("../../assets/images/logo-mini.svg")} alt="logo" /></a>
+      <a className="navbar-brand brand-logo-mini align-self-center d-lg-none" href="!#" onClick={evt =>evt.preventDefault()}><img style={{width: '50%'}}src={require("../../assets/images/logo-mini.png")} alt="logo" /></a>
         <button className="navbar-toggler navbar-toggler align-self-center" type="button" onClick={ () => document.body.classList.toggle('sidebar-icon-only') }>
           <i className="mdi mdi-menu"></i>
         </button>

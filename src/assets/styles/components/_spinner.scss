@@ -4,13 +4,13 @@
   align-items: center;
   height: calc(100vh - #{$navbar-height} - 5.5rem);
   position: fixed;
-  width: calc(100% - #{$sidebar-width-lg} - 4rem);
+  width: calc(100% - #{$sidebar-width-lg} + 10rem);
   @media (max-width: 991px) {
     width: 100%;
   }
   .donut {
-    width: 4rem;
-    height: 4rem;
+    width: 8rem;
+    height: 8rem;
     border-radius: 50%;
     border: 0.3rem solid lighten(theme-color(primary),30%);
     border-top-color: lighten(theme-color(primary),10%);
@@ -20,13 +20,13 @@
 
 :host-context(.sidebar-icon-only) {
   .spinner-wrapper {
-    width: calc(100% - #{$sidebar-width-icon} - 4rem);    
+    width: calc(100% - #{$sidebar-width-icon} - 4rem);
   }
 }
 
 :host-context(.sidebar-mini) {
   .spinner-wrapper {
-    width: calc(100% - #{$sidebar-width-mini} - 4rem);    
+    width: calc(100% - #{$sidebar-width-mini} - 4rem);
   }
 }
 
