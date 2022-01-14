@@ -142,9 +142,9 @@ export default function Orders() {
             </div>
             <div className="col-md-8 grid-margin stretch-card">
               <div className="card">
-                <Tabs defaultActiveKey="buy">
+                <Tabs defaultActiveKey="buy" style={{paddingLeft: 5, paddingTop: 5}}>
 
-                    <Tab title="Previous Buy Orders" eventKey="buy" className="col-xl-12">
+                    <Tab title="Buy Orders" eventKey="buy" className="col-xl-12">
                     <div className="card-body">
                     <div className="row">
                       <p className="card-description">All the buy orders you have done!</p>
@@ -248,7 +248,7 @@ export default function Orders() {
                     </div>
                     </Tab>
 
-                    <Tab title="Previous Sell Orders" eventKey="sell" className="col-xl-12">
+                    <Tab title="Sell Orders" eventKey="sell" className="col-xl-12">
                     <div className="card-body">
                     <div className="row">
                       <p className="card-description">All the sell orders you have done!</p>
